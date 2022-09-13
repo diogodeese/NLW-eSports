@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <img src="web/src/assets/logo-nlw.svg" alt="Logo" width="160" height="160" />
+  <img src="web/src/assets/logo-nlw.svg" alt="Logo" width="160" height="80" />
 
   <h3 align="center">Next Level Week eSports</h3>
   
