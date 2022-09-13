@@ -52,6 +52,11 @@
 * [Node.js](https://nodejs.org/en/)
 * [Tailwind CSS](https://tailwindcss.com/)
 
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
