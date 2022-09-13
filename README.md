@@ -15,12 +15,9 @@
   [![MIT License][license-shield]][license-url]
 
   <p align="center">
-    
-    <br />
-    <br />
     <a href="https://github.com/diogodeese/NLW-eSports/issues">Report Bug</a>
     ·
-asdasd
+     asdasd
     ·
     <a href="https://github.com/diogodeese/NLW-eSports/issues">Request Feature</a>
   </p>
@@ -51,9 +48,9 @@ asdasd
 ### Built With
 
 * [React.js](https://reactjs.org/)
-* [MongoDB](https://www.mongodb.com/)
+* [React Native](https://reactnative.dev/)
+* [Node.js](https://nodejs.org/en/)
 * [Tailwind CSS](https://tailwindcss.com/)
-* [Radix UI](https://www.radix-ui.com/)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
