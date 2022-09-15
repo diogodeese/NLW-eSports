@@ -1,4 +1,5 @@
-import { View, TouchableOpacity, Image } from 'react-native';
+import { useEffect, useState } from 'react';
+import { View, TouchableOpacity, Image, FlatList, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRoute } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
@@ -7,6 +8,7 @@ import LogoImg from '../../assets/logo-nlw-esports.png';
 import { Entypo } from '@expo/vector-icons';
 import { Heading } from '../../components/Heading';
 import { Background } from '../../components/Background';
+import { DuoCard, DuoCardProps } from '../../components/DuoCard';
 
 import { GameParams } from '../../@types/navigation';
 
@@ -14,6 +16,7 @@ import { styles } from './styles';
 import { THEME } from '../../theme';
 
 export function Game() {
+  const [duos, setDuos] = useState<DuoCardProps[]>([]);
   const navigation = useNavigation();
   const route = useRoute();
   const game = route.params as GameParams;
@@ -21,6 +24,12 @@ export function Game() {
   function handleGoBack() {
     navigation.goBack();
   }
+
+  useEffect(() => {
+    fetch(`http://192.168.1.74:3333/games/${game.id}/ads`)
+      .then((response) => response.json())
+      .then((data) => setDuos(data));
+  }, []);
 
   return (
     <Background>
@@ -50,6 +59,26 @@ export function Game() {
         <Heading
           title={game.title}
           subtitle="Conect and play!"
+        />
+
+        <FlatList
+          data={duos}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <DuoCard
+              data={item}
+              onConnect={() => {}}
+            />
+          )}
+          horizontal
+          style={styles.containerList}
+          contentContainerStyle={[
+            duos.length > 0 ? styles.contentList : styles.emptyListContent,
+          ]}
+          showsHorizontalScrollIndicator={false}
+          ListEmptyComponent={() => (
+            <Text style={styles.emptyListText}>There's no ads</Text>
+          )}
         />
       </SafeAreaView>
     </Background>
