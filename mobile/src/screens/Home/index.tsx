@@ -8,9 +8,16 @@ import { Heading } from '../../components/Heading';
 import { Background } from '../../components/Background';
 
 import { styles } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export function Home() {
   const [games, setGames] = useState<GameCardProps[]>([]);
+
+  const navigation = useNavigation();
+
+  function handleOpenGame({ id, title, bannerUrl }: GameCardProps) {
+    navigation.navigate('game', { id, title, bannerUrl });
+  }
 
   useEffect(() => {
     fetch('http://192.168.1.74:3333/games')
@@ -34,7 +41,14 @@ export function Home() {
         <FlatList
           data={games}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <GameCard data={item} />}
+          renderItem={({ item }) => (
+            <GameCard
+              data={item}
+              onPress={() => {
+                handleOpenGame(item);
+              }}
+            />
+          )}
           showsHorizontalScrollIndicator={false}
           horizontal
           contentContainerStyle={styles.contentList}
