@@ -44,7 +44,7 @@ app.post('/games/:id/ads', async (request, response) => {
     },
   });
 
-  return response.json();
+  return response.json(ad);
 });
 
 app.get('games/:id/ads', async (request, response) => {
