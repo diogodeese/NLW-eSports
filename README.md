@@ -13,14 +13,6 @@
   [![Stargazers][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
   [![MIT License][license-shield]][license-url]
-
-  <p align="center">
-    <a href="https://github.com/diogodeese/NLW-eSports/issues">Report Bug</a>
-    ·
-     asdasd
-    ·
-    <a href="https://github.com/diogodeese/NLW-eSports/issues">Request Feature</a>
-  </p>
 </div>
 
 
