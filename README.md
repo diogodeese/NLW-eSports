@@ -36,7 +36,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-...
+In the Next Level Week eSports the goal was to built something that could help gamers. This project is an application both for web and mobile that match to gamers that want to play the same game. You can search for people that plays at the same time as you, the same games as you and if they want to use voice chat or not.
 
 
 <!-- BUILT WITH -->
